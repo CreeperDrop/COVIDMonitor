@@ -153,7 +153,7 @@ vector<string> fetchRecord(string path, string& searchTerm, int numOfColumns) {
 
 //This function grabs the new cases per country in an interval
 vector<string> newCases(string& country) {
-	string path = "D:\\Study\\FALL2020\\CSCE 1001\\Project\\Project\\Dataset\\newcases.csv";
+	string path = "/Dataset/newcases.csv";
 	int columns = 12;
 
 	vector<string> row = fetchRecord(path, country, columns);
@@ -176,7 +176,7 @@ int totalCases(string& country) {
 
 //This function grabs the total deaths per country till date 
 int totalDeaths(string& country) {
-	string path = "D:\\Study\\FALL2020\\CSCE 1001\\Project\\Project\\Dataset\\totaldeaths.csv";
+	string path = "/Dataset/totaldeaths.csv";
 	int columns = 12;
 	int sum = 0;
 	vector<string>row = fetchRecord(path, country, columns);
@@ -189,7 +189,7 @@ int totalDeaths(string& country) {
 
 //This function grabs the top n countries that are most hit
 string* topN(int n) {
-	string path = "D:\\Study\\FALL2020\\CSCE 1001\\Project\\Project\\Dataset\\countries.csv";
+	string path = "/Dataset/countries.csv";
 	ifstream fin;
 	vector <string> countries;
 	vector <int> cases;
@@ -240,7 +240,7 @@ string* topN(int n) {
 
 //This function grabs the highest age group that has been affected 
 int highestAge(string& country) {
-	string path = "D:\\Study\\FALL2020\\CSCE 1001\\Project\\Project\\Dataset\\agegroups.csv";
+	string path = "/Dataset/agegroups.csv";
 	int columns = 3;
 	vector <string> row = fetchRecord(path, country, columns);
 	
@@ -249,7 +249,7 @@ int highestAge(string& country) {
 
 //This function grabs the highest age group that has been affected 
 int leastAge(string& country) {
-	string path = "D:\\Study\\FALL2020\\CSCE 1001\\Project\\Project\\Dataset\\agegroups.csv";
+	string path = "/Dataset/agegroups.csv";
 	int columns = 3;
 	vector <string> row = fetchRecord(path, country, columns);
 
